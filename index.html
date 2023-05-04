@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Service tracker</title>
+</head>
+
+<body>
+<h2>Track your service</h2>
+ Current hours: <p id="p1"><span id="servicehours"></span></p>
+<p>
+<button class="+1 hours" type="button" onclick="hourone()">+1 hour</button> 
+<button class="+5 hours" type="button" onclick="hourfive()">+5 hours</button>
+<button class="+10 hours" type="button" onclick="hourten()">+10 hours</button>
+<button class="+25 hours" type="button" onclick="hourtwentyfive()">+25 hours</button>
+<button class="+50 hours" type="button" onclick="hourfifty()">+50 hours</button>
+<button class="+100 hours" type="button" onclick="hourhundred()">+100 hours</button>
+<p><button class="Update hours" type="button" onclick="update()">Update hours</button></p>
+</body>
+
+
+
+<script>
+let servicehours = 0
+let onehour = 1
+let fivehour = 5
+let tenhour = 10
+let twentyfivehour = 25
+let fiftyhour = 50
+let hundredhour = 100
+var update = function() {
+ document.getElementById("servicehours").innerHTML = servicehours;
+}
+var hourone = function () {
+servicehours = servicehours + onehour
+}
+var hourfive = function () {
+servicehours = servicehours + fivehour
+}
+var hourten = function () {
+servicehours = servicehours + tenhour
+}
+var hourtwentyfive = function () {
+servicehours = servicehours + twentyfivehour
+}
+var hourfifty = function () {
+servicehours = servicehours + fiftyhour
+}
+var hourhundred = function () {
+servicehours = servicehours + hundredhour
+}
+</script>
+
+</html>
